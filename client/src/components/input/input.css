@@ -1,0 +1,27 @@
+.input-wrapper {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  gap: 5px;
+  position: relative;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.input-wrapper input {
+  padding: 5px;
+  height: 40px;
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid black;
+  outline: none;
+  border-radius: 10px;
+}
+.input-wrapper input.has-error {
+  border: 1px solid #f11919;
+}
+.input-wrapper p {
+  color: #f11919;
+  font-size: 11px;
+}
+
+/*# sourceMappingURL=input.css.map */

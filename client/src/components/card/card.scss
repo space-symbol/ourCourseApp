@@ -1,0 +1,56 @@
+
+.card{
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border: 1px solid #000000;
+  border-radius: 15px;
+  max-width: 100%;
+  text-align: left;
+  gap: 20px;
+  transition: transform ease-out 0.3s;
+
+  &:hover{
+    position: relative;
+    z-index: 5;
+    box-shadow: rgba(0, 0, 0, 0.075) 0 0.125rem 0.25rem ;
+    transform: translateX(-5px) translateY(5px);
+  }
+
+  img{
+    width: 40%;
+    height: 80%;
+  }
+
+  &_wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    align-items: flex-start;
+
+
+
+    h2{
+      font-size: 18px;
+      font-weight: normal;
+    }
+
+    p{
+      font-size: 14px;
+      font-weight: 300;
+
+    }
+  }
+}
+
+@media  screen and (max-width: 630px){
+  .card{
+    width: 60%;
+    flex-direction: column;
+    img{
+      width: 100%;
+    }
+  }
+}

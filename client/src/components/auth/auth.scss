@@ -1,0 +1,12 @@
+.container{
+  overflow-y: auto;
+}
+.form-wrapper{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 43px 0 50px;
+  min-height: 250px;
+}

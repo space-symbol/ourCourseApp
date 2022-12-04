@@ -1,0 +1,71 @@
+.button {
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  position: relative;
+  border: none;
+  cursor: pointer;
+}
+.button::after, .button::before, .button > span::after, .button > span::before {
+  content: "";
+  transition: all 0.2s ease-out;
+  width: 0.5px;
+  height: 0.5px;
+  position: absolute;
+  border: none;
+}
+.button::after {
+  bottom: 0;
+  left: 0;
+}
+.button::before {
+  right: 0;
+  bottom: 0;
+}
+.button:hover::after, .button:hover > span::after {
+  width: 100%;
+  background-color: #000;
+  transition: width 0.3s;
+}
+.button:hover::before, .button:hover > span::before {
+  height: 100%;
+  background-color: #000;
+  transition: height 0.5s;
+}
+.button:active {
+  transform: scale(0.97);
+  transition: all 0.1s;
+}
+.button:focus {
+  outline: none;
+}
+.button:focus::after, .button:focus > span::after {
+  width: 100%;
+  background-color: #000;
+  transition: width 0.3s;
+}
+.button:focus::before, .button:focus > span::before {
+  height: 100%;
+  background-color: #000;
+  transition: height 0.5s;
+}
+.button span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 10px 10px;
+}
+.button span::after {
+  top: 0;
+  right: 0;
+}
+.button span::before {
+  left: 0;
+  top: 0;
+}
+
+/*# sourceMappingURL=button.css.map */

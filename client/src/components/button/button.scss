@@ -1,0 +1,82 @@
+.button {
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  position: relative;
+  border: none;
+  cursor: pointer;
+
+  &::after, &::before, >span::after, >span::before{
+    content: '';
+    transition: all 0.2s ease-out;
+    width: 0.5px;
+    height: 0.5px;
+    position: absolute;
+    border: none;
+  }
+
+  &::after {
+    bottom: 0;
+    left: 0;
+  }
+
+    &::before {
+      right: 0;
+      bottom: 0;
+    }
+
+  &:hover::after, &:hover>span::after{
+    width: 100%;
+    background-color: #000;
+    transition: width 0.3s;
+  }
+  &:hover::before, &:hover>span::before{
+    height: 100%;
+    background-color: #000;
+    transition: height 0.5s;
+  }
+
+  &:active {
+    transform: scale(0.97);
+    transition: all 0.1s;
+  }
+
+  &:focus{
+    outline: none;
+
+    &::after, &>span::after{
+      width: 100%;
+      background-color: #000;
+      transition: width 0.3s;
+    }
+    &::before, &>span::before{
+      height: 100%;
+      background-color: #000;
+      transition: height 0.5s;
+    }
+  }
+
+  span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 10px 10px;
+
+    &::after{
+      top: 0;
+      right: 0;
+    }
+    &::before {
+      left: 0;
+      top: 0;
+    }
+
+
+  }
+
+
+}
